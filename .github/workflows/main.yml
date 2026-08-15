@@ -1,33 +1,31 @@
-name: BADOL-TG-BOT 2.0 CI/CD
+name: Node.js CI
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ "main" ] # অথবা আপনার ব্রাঞ্চের নাম (master হলে master দিন)
   pull_request:
-    branches: [ main, master ]
-  schedule:
-    # প্রতি ৩০ মিনিট পর পর অ্যাকশনটি ট্রিগার হবে যেন প্রজেক্ট ঘুমিয়ে না পড়ে
-    - cron: '*/30 * * * *'
-  workflow_dispatch:
+    branches: [ "main" ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [22.x] # Node.js এর আধুনিক ভার্সন ব্যবহার করা হয়েছে
+
     steps:
-    - name: Checkout Repository
+    - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Setup Node.js
+    - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
-        node-version: '18'
-        cache: 'npm'
+        node-version: ${{ matrix.node-version }}
+        # এখানে cache অপশনটি রাখা হয়নি যাতে lock ফাইলের জন্য এরর না আসে
 
-    - name: Install Dependencies
+    - name: Install dependencies
       run: npm install
 
-    - name: Start Bot Checking or Keep Alive
-      run: |
-        echo "BADOL-TG-BOT workflow check running successfully..."
-        node -e "console.log('Environment check passed.')"
+    - name: Start Bot
+      run: node index.js
