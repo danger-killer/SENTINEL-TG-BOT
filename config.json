@@ -1,0 +1,85 @@
+{
+  "botInfo": {
+    "name": "BADOL-TG-BOT",
+    "prefix": "/",
+    "token": "ADD-YOUR-TELEGRAM-BOT-TOKEN",
+    "timezone": "Asia/Dhaka",
+    "usePrefix": true
+  }, // ওনার নাম এবং আইডি চেঞ্জ করবেন না বট চলবেনা তাহলে আর সব কিছু ইচ্ছা মত মডিফাইড করুন সমস্যা না
+  "ownerInfo": {
+    "mainOwner": {
+      "name": "MOHAMMAD BADOL",
+      "id": "6954597258"
+    },
+    "botAdmins": [
+      "6954597258"
+    ]
+  },
+  "settings": {
+    "prefixModeEnabled": false,
+    "allowCustomPrefix": true,
+    "allowInboxMode": true,
+    "onlyAdmin": false,
+    "onlyAdminMessage": "⚠️ This bot is in admin-only mode. Only admins can use commands.",
+    "disabledCommands": [],
+    "disabledEvents": [],
+    "ignoreOldMessages": {
+      "enabled": true
+    },
+    "showCommandSuggestions": {
+      "enabled": true
+    },
+    "groupApproval": {
+      "enabled": true
+    },
+    "dmApproval": {
+      "enabled": true
+    },
+    "levelSystem": {
+      "enabled": true,
+      "expPerMessage": 5,
+      "expToLevelUp": 100
+    },
+    "adminReactionUnsend": {
+      "enabled": true,
+      "emoji": "👍"
+    },
+    "botStartNotification": {
+      "enabled": false,
+      "sendToAdmins": true,
+      "sendToThreads": false,
+      "threadIds": []
+    },
+    "logLevel": "info",
+    "language": "bn"
+  },
+  "database": {
+    "type": "json",
+    "uriMongodb": "",
+    "path": "./DATABASE/data",
+    "autoSyncWhenStart": false,
+    "autoRefreshThreadInfoFirstTime": true
+  },
+  "dashBoard": {
+    "enable": true,
+    "port": 3000,
+    "passwordProtection": {
+      "enable": false,
+      "password": ""
+    }
+  },
+  "serverUptime": {
+    "enable": false,
+    "port": 3001,
+    "socket": {
+      "enable": true,
+      "channelName": "uptime",
+      "verifyToken": "badolbotkey"
+    }
+  },
+  "autoUptime": {
+    "enable": false,
+    "url": "",
+    "timeInterval": 180
+  }
+}
