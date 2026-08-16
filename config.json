@@ -1,18 +1,18 @@
 {
   "botInfo": {
-    "name": "BADOL-TG-BOT",
+    "name": "SENTINEL-BOT",
     "prefix": "/",
-    "token": "ADD YOUR BOT TOKEN",
+    "token": "8741146238:AAFAHJojISoPqfjcN_pgp5CmpNrLz_dzc2E",
     "timezone": "Asia/Dhaka",
     "usePrefix": true
   },
   "ownerInfo": {
     "mainOwner": {
-      "name": "MOHAMMAD BADOL",
-      "id": "6954597258"
+      "name": "DK-SENTINEL",
+      "id": "8652727826"
     },
     "botAdmins": [
-      "6954597258"
+      "8652727826"
     ]
   },
   "settings": {
